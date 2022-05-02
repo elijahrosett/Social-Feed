@@ -7,14 +7,17 @@ import CreatePost from './Components/CreatePost/CreatePost';
 function App() {
   const [post, setPost] = useState([{userName: "Bob smith ", message: "Here is my post "}])
 
-
+function addNewPost(newPost){
+  let tempPost = [...post, newPost];
+  setPost(tempPost);
+}
 
 
 
   return (
     <div>
       <Posts post={post} />
-      <CreatePost />
+      <CreatePost newPost={addNewPost} />
 
 
 

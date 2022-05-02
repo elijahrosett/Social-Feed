@@ -1,7 +1,7 @@
 // how to create a single post and save it
 import React, { useState } from 'react';
 
-const CreatePost = () => {
+const CreatePost = (props) => {
 
     const [userName, setUsername] = useState("")
     const [message, setMessage] = useState("")
@@ -9,10 +9,11 @@ const CreatePost = () => {
     function handleSubmit(event){
         event.preventDefault();
         let newPost = {
-            userNAme: userName,
+            userName: userName,
             message: message
         };
         console.log(newPost)
+        props.newPost(newPost)
     }
 
     return ( 
