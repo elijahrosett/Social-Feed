@@ -1,0 +1,14 @@
+.border-box{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 1em;
+    padding: 1em;
+}
+
+.active{
+    background-color: green(250, 252, 254);
+}
+.inactive{
+    background-color: white;
+}
