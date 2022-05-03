@@ -7,8 +7,23 @@
 }
 
 .active{
-    background-color: green(250, 252, 254);
+    background-color: rgb(9, 255, 25) (250, 252, 254);
 }
+
 .inactive{
-    background-color: white;
+    background-color: rgb(251, 246, 246);
+}
+
+.dislikeActive{
+    background-color: rgb(255, 2, 2) (250, 252, 254);
+}
+.dislikeInactive{
+    background-color: rgb(251, 246, 246);
+}
+.bold{
+    font-weight: bold;
+}
+
+.center{
+    text-align: center;
 }

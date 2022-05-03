@@ -9,10 +9,7 @@ const Posts = (props) => {
                 <p>
                 <td>{props.post.message}</td>
                 </p>
-                    <div>
-                    <button>Like</button>
-                    <button>Dislike</button>
-                    </div>
+                   
                 
             </tr>
         </div>

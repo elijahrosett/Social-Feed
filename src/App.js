@@ -8,7 +8,7 @@ import "./App.css"
 
 
 function App() {
-  const [post, setPost] = useState([{userName: "", message: ""}])
+  const [post, setPost] = useState([{userName: "", message: "", buttonClass: ""}])
 
 function addNewPost(newPost){
   let tempPost = [...post, newPost];
