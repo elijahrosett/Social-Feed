@@ -25,6 +25,7 @@ function handleClick2(){
     };
 }
     return (
+        <section>
         <div className="card">
             <div className="card-body">
                 {props.post.map((post) => {
@@ -45,6 +46,7 @@ function handleClick2(){
                 })}
         </div>            
     </div>
+    </section>
 )}
 
 export default DisplayPosts;
