@@ -6,19 +6,27 @@ import React, { useState } from 'react';
 const DisplayPosts = (props) => {
 
     const [likeButtonClass, setlikeButtonClass] = useState("inactive");
-    const [dislikeButtonClass, setdislikeButtonClass] = useState('inactive2');
+    const [dislikeButtonClass, setdislikeButtonClass] = useState('dislikeInactive');
 
 function handleClick(){
-    if (likeButtonClass === "inactive"){
-        setlikeButtonClass("active")
+    if (likeButtonClass === "inactive" && dislikeButtonClass === "dislikeActive"){
+        setlikeButtonClass("active");
+        setdislikeButtonClass("dislikeInactive");
     }
+    else if (likeButtonClass === "inactive"){
+        setlikeButtonClass("active")
+    } 
     else{
         setlikeButtonClass("inactive")
     }
 };
 function handleClick2(){
-    if (dislikeButtonClass === "dislikeInactive"){
+    if (dislikeButtonClass === "dislikeInactive" && likeButtonClass === 'active'){
         setdislikeButtonClass("dislikeActive")
+        setlikeButtonClass("inactive")
+    }
+    else if (dislikeButtonClass === "dislikeInactive"){
+        setlikeButtonClass("dislikeActive")
     }
     else{
         setdislikeButtonClass("dislikeInactive")
