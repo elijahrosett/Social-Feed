@@ -6,12 +6,12 @@ import React, { useState } from 'react';
 const DisplayPosts = (props) => {
 
     const [likeButtonClass, setlikeButtonClass] = useState("inactive");
-    const [dislikeButtonClass, setdislikeButtonClass] = useState('dislikeInactive');
+    const [dislikeButtonClass, setdislikeButtonClass] = useState('inactive2');
 
 function handleClick(){
-    if (likeButtonClass === "inactive" && dislikeButtonClass === "dislikeActive"){
+    if (likeButtonClass === "inactive" && dislikeButtonClass === "active2"){
         setlikeButtonClass("active");
-        setdislikeButtonClass("dislikeInactive");
+        setdislikeButtonClass("inactive2");
     }
     else if (likeButtonClass === "inactive"){
         setlikeButtonClass("active")
@@ -21,15 +21,15 @@ function handleClick(){
     }
 };
 function handleClick2(){
-    if (dislikeButtonClass === "dislikeInactive" && likeButtonClass === 'active'){
-        setdislikeButtonClass("dislikeActive")
+    if (dislikeButtonClass === "inactive2" && likeButtonClass === 'active'){
+        setdislikeButtonClass("active2")
         setlikeButtonClass("inactive")
     }
-    else if (dislikeButtonClass === "dislikeInactive"){
-        setlikeButtonClass("dislikeActive")
+    else if (dislikeButtonClass === "inactive2"){
+        setdislikeButtonClass("active2")
     }
     else{
-        setdislikeButtonClass("dislikeInactive")
+        setdislikeButtonClass("inactive2")
     };
 }
     return (
